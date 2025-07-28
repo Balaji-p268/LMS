@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+   
+</head>
+<div class="main">
+<body>
+    <section id="login">
+        <h1><u class="line">ONLINE LEARNING PLATFORM</u></h1>
+    </section>
+   <nav class="navbar">
+        <div class="and">
+            <a href="#"> <img src="img/logo.jpg" style="height: 30px; width: 90px;"></a>
+            <div class="and1">
+            <a href="homepage.html">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="instructors.html">instructors</a>
+            <a class="active" href="Students.html">Students</a>
+            <a href="forms.html">request forms</a>
+       </div>
+     </div>
+    </nav>
+    
+
+<section class="login-signup">
+    <div class="container">
+            <h3>LOGIN/SIGNUP</h3>
+            <form id="login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="login-username" name="username" required>
+    
+                <label for="password">Password:</label>
+                <input type="password" id="login-password" name="password" required>
+    
+                <button type="button" onclick="login()">Login</button>
+            </form> 
+            <form id="signup-form" style="display:none; margin-top:20px;">
+                <label for="new-username">New Username:</label>
+                <input type="text" id="new-username" name="new-username" required>
+                <label for="new-password">New Password:</label>
+                <input type="password" id="new-password" name="new-password" required>
+                <button type="button" onclick="signup()">Sign Up</button>
+                <button type="button" onclick="showLoginForm()">Back to Login</button>
+            </form>
+            <p id="signup-link">Don't have an account? <a href="#" onclick="showSignupForm()">Sign Up</a></p>
+        </section>
+    </div>
+
+
+
+    <script>
+            function login() {
+                var username = document.getElementById("login-username").value;
+                var password = document.getElementById("login-password").value;
+                var storedUsername = localStorage.getItem("username");
+                var storedPassword = localStorage.getItem("password");
+                if (username === storedUsername && password === storedPassword) {
+                    localStorage.setItem("isLoggedIn", "true");
+                    window.location.href = "homepage.html";
+                } else {
+                    alert("Login failed. Check your username and password.");
+                }
+            }
+
+            function signup() {
+                var newUsername = document.getElementById("new-username").value;
+                var newPassword = document.getElementById("new-password").value;
+                if (newUsername === "" || newPassword === "") {
+                    alert("Please fill in all fields.");
+                    return;
+                }
+                localStorage.setItem("username", newUsername);
+                localStorage.setItem("password", newPassword);
+                alert("Registration successful! You can now log in with your new account.");
+                showLoginForm();
+            }
+
+            function showSignupForm() {
+                document.getElementById("login-form").style.display = "none";
+                document.getElementById("signup-form").style.display = "block";
+                document.getElementById("signup-link").style.display = "none";
+            }
+
+            function showLoginForm() {
+                document.getElementById("login-form").style.display = "block";
+                document.getElementById("signup-form").style.display = "none";
+                document.getElementById("signup-link").style.display = "block";
+            }
+        </script>
+
+
+
+
+
+    </body>
+    </html>
+    

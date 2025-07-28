@@ -1,0 +1,199 @@
+my Courses/Instructors
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Instructor Portal</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(120deg, #f8fafc 0%, #e0e7ff 100%);
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background: #22223b;
+            color: #fff;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(34,34,59,0.08);
+        }
+
+        nav a {
+            color: #f2e9e4;
+            text-decoration: none;
+            padding: 15px 20px;
+            font-weight: 500;
+            border-radius: 4px;
+        }
+        nav a:hover {
+            background: #4a4e69;
+            color: #f2e9e4;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 32px 24px;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(34,34,59,0.10);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 32px 0 16px 0;
+        }
+
+        .hero h2 {
+            font-size: 2.2rem;
+            color: #22223b;
+            margin-bottom: 8px;
+        }
+        .hero p {
+            color: #4a4e69;
+            font-size: 1.1rem;
+        }
+        .link {
+            display: inline-block;
+            margin-top: 12px;
+            color: #fff;
+            background: #100c0f;
+            padding: 8px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            
+        }
+        .link:hover {
+            background: #2c08f6;
+            color: #fff;
+            transition: transform 0.22s, box-shadow 0.22s;
+
+        }
+
+        .courses {
+            text-align: center;
+            padding: 20px 0 0 0;
+        }
+
+        .courses h2 {
+            font-size: 2rem;
+            color: #22223b;
+            margin-bottom: 24px;
+        }
+
+        .course-card {
+            border: 1.5px solid #9a8c98;
+            border-radius: 16px;
+            padding: 28px 20px 20px 20px;
+            margin: 18px 14px;
+            display: inline-block;
+            max-width: 320px;
+            min-width: 260px;
+            text-align: left;
+            background: #f8f7fa;
+            box-shadow: 0 2px 12px rgba(34,34,59,0.07);
+            vertical-align: top;
+            transition: transform 0.22s, box-shadow 0.22s;
+        }
+        .course-card:hover {
+            background: #e0e7ff;
+            transform: translateY(-8px) scale(1.04);
+            box-shadow: 0 8px 32px rgba(34,34,59,0.13);
+        }
+        .course-card img {
+            width: 100%;
+            max-height: 140px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 16px;
+        }
+        .course-card h3 {
+            font-size: 1.2rem;
+            color: #22223b;
+            margin: 0 0 8px 0;
+        }
+        .course-card p {
+            color: #4a4e69;
+            font-size: 1rem;
+            margin-bottom: 14px;
+        }
+        .course-card a {
+            display: inline-block;
+            background: #22223b;
+            color: #f2e9e4;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+        .course-card a:hover {
+            background: #9a8c98;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Instructor Portal</h1>
+    </header>
+    <nav class="navbar">
+        <div class="and">
+            <a href="#"> <img src="img/logo.jpg" style="height: 30px; width: 90px;"></a>
+            <div class="and1">
+            <a href="homepage.html">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="instructors.html">instructors</a>
+            <a  href="Students.html">Students</a>
+            <a href="forms.html">request forms</a>
+       </div>
+     </div>
+    </nav>
+    <div class="container">
+        <section class="hero">
+            <h2>Welcome, Instructors</h2>
+            <p>Manage your courses and interact with your students.</p>
+            
+        </section>
+        
+    
+        
+        <section class="courses">
+            <h2>My Courses</h2>
+            <div class="course-card">
+                <img src="img/ml.jpg" alt="Machine Learning Basics">
+                <h3>Machine Learning Basics</h3>
+                <p>Explore the fundamentals of machine learning and artificial intelligence.</p>
+                <a href="https://www.udemy.com/course/machinelearning/?utm_source=bing&utm_medium=udemyads&utm_campaign=BG-Search_Keyword_Beta_Prof_la.EN_cc.India&campaigntype=Search&portfolio=Bing-India&language=EN&product=Course&test=&audience=Keyword&topic=Machine_Learning&priority=Beta&utm_content=deal4584&utm_term=_._ag_1329311946393631_._ad__._kw_Machine+Learning+course_._de_c_._dm__._pl__._ti_kwd-83083235024206%3Aloc-90_._li_155620_._pd__._&matchtype=e&msclkid=fabb3958cba91e8e6faf51d9c31397cd&couponCode=PMNVD2025" target="_blank">View Course</a>
+            </div>
+            <div class="course-card">
+                <img src="img/java.jpg" alt="Java Programming">
+                <h3>Java Programming</h3>
+                <p>Master Java programming from basics to advanced concepts with hands-on projects.</p>
+                <a href="https://www.coursera.org/professional-certificates/java-developer" target="_blank">View Course</a>
+            </div>
+            <div class="course-card">
+                <img src="img/data.jpg" alt="Data Science Basics">
+                <h3>Data Science Basics</h3>
+                <p>Unlock the world of data science and analytics with this comprehensive course.</p>
+                <a href="https://www.coursera.org/professional-certificates/ibm-data-science" target="_blank">View Course</a>
+            </div>
+        </section>
+        <a class="link" href="Instructors.html">Back To Login Page</a>
+    </div>
+
+    <script>
+        function login() {
+            var username = document.getElementById("login-username").value;
+            var password = document.getElementById("login-password").value;
+            if (username === "exampleInstructor" && password === "examplePassword") {
+                alert("Login successful!");
+            } else {
+                alert("Login failed. Check your username and password.");
+            }
+        }
+    </script>
+</body>
+</html>

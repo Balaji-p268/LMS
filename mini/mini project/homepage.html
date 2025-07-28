@@ -1,0 +1,213 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        if (localStorage.getItem('isLoggedIn') !== 'true') {
+            window.location.href = 'login.html';
+        }
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+ <style>
+        /* Your styles remain unchanged */
+        .main{
+            background-color: white;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(235, 238, 232);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 20px;
+            background-color: #cccccc78
+        }
+
+        .slideshow-container {
+            max-width: 800px;
+            margin: auto;
+            margin-top: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mySlides {
+            display: none;
+            text-align: center;
+        }
+
+        .course-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px; /* Added border-radius for a more attractive look */
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -30px;
+            padding: 10px;
+            color: rgb(8, 8, 8);
+            font-size: 20px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        h2{
+            text-align: center;
+            font-style: inherit;
+        }
+
+
+.login-signup {
+    border: 0px solid #ccc;
+    padding: 0px;
+}
+
+.login-signup form {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.login-signup label {
+    display: block;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+
+
+.login-signup button {
+    background-color: #333;
+    color:antiquewhite;
+    font:bolder;
+    text-decoration: burlywood;
+    border: none;
+    border-radius: 20px 20px;
+    align-content: center;
+    font-family: Arial, sans-serif;
+    padding: 12px 22px;
+    cursor: pointer;
+}
+
+.login-signup button:hover {
+    background-color: #000000;
+}
+
+    </style>
+<div class="main">
+<body>
+    <header>
+        <h1>Learn Online</h1>
+        
+</header>
+    <nav class="navbar">
+        <div class="and">
+            <a href="#"> <img src="img/logo.jpg" style="height: 30px; width: 90px;"></a>
+            <div class="and1">
+            <a class="active" href="homepage.html">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="instructors.html">instructors</a>
+            <a  href="Students.html">Students</a>
+            <a href="forms.html">request forms</a>
+       </div>
+     </div>
+    </nav>
+    
+    <div class="container">
+    <h2 class="featured-courses"> FEATURED COURSES </h2>
+    <div class ="slideshow-container" >
+
+        <div class="mySlides">
+         
+            <img class="course-image" src="img/dbms.jpg" alt="Course 1" style="height: 200px;width: 400px;">
+        </div>
+        <div class="mySlides">
+            <img class="course-image" src="img/py.jpg" alt="Course 2" style="height: 200px;width: 400px;">
+           
+           
+        </div>
+        <div class="mySlides">
+            <img class="course-image"   src="img/ds.jpg" alt="Course 3" style="height: 200px;width: 400px;">
+        </div>
+        <div class="mySlides">
+            <img class="course-image"   src="img/ml.jpg" alt="Course 4" style="height: 200px;width: 400px;">
+        </div>
+        <div class="mySlides">
+            <img class="course-image"   src="img/java.jpg" alt="Course 5"style="height: 200px;width: 400px;">
+        </div>
+
+        <div class="mySlides">
+            <img class="course-image"   src="img/se.jpg" alt="Course 6" style="height: 200px;width: 400px;">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+
+    <section class="hero">
+        <p>Explore our high-quality courses and take your skills to the next level.</p>
+        <h4>Press Courses to browse all the content</h4>
+        <section class="login-signup">
+            <a href="courses.html">
+                <button type="button">Courses</button>
+            </a>
+        </section>
+    </section>
+</div>
+</div>
+</div>
+
+
+
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+
+            if (slideIndex >= slides.length) {
+                slideIndex = 0;
+            }
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slides[slideIndex].style.display = "block";
+            slideIndex++;
+
+            setTimeout(showSlides, 2000); 
+        }
+    </script>
+</body>
+</html>

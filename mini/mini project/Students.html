@@ -1,0 +1,138 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        if (localStorage.getItem('isLoggedIn') !== 'true') {
+            window.location.href = 'login.html';
+        }
+    </script>
+    <meta charset="UTF-8">
+    <title>Course Page</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+    .body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+    }
+
+   
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+    }
+
+    .hero {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    .login-signup {
+        border: 1px solid #ccc;
+        padding: 20px;
+    }
+
+    .login-signup form {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .login-signup label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .login-signup input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+   
+    
+
+    .courses {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .courses h2 {
+        font-size: 24px;
+    }
+
+    .course-card {
+        border: 15px solid #ccc;
+        padding: 20px;
+        margin: 20px;
+        display: inline-block;
+        max-width: 300px;
+        text-align: center;
+        background-color: #fff;
+    }
+    h2{
+        text-align: center;
+        font:caption bold;
+        color: #3e4041;
+        text-shadow: #dfdada 200px;
+    }
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="and">
+            <a href="#"> <img src="img/logo.jpg" style="height: 30px; width: 90px;"></a>
+            <div class="and1">
+            <a href="homepage.html">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="instructors.html">instructors</a>
+            <a class="active" href="Students.html">Students</a>
+            <a href="forms.html">request forms</a>
+       </div>
+     </div>
+    </nav>
+    <header class="header">
+        <h1>Learn Online</h1>
+    </header>
+    
+    <h2> EXCLUSIVE FREE COURSES  </h2>
+    <p style="text-align: center;"> Login  and enroll this EXCLUSIVE courses for FREE </p>
+
+
+    <div class="course-card">
+        <h4 style="font-weight:200; color: green; text-align:left;">FREE</h4>
+        <img src="img/js.jpg" alt="Course 4" style="height: 200px; width: 300px;">
+        <h3>Advanced JavaScript Techniques</h3>
+        <p>Take your JavaScript skills to the next level with advanced techniques.</p>
+        <a href="https://www.coursera.org/specializations/advanced-javascript" style="text-align: center; color: antiquewhite; font-weight: bold;">ENROLL NOW</a>
+    </div>
+
+    <div class="course-card">
+        <h4 style="font-weight:200; color: green; text-align:left;">FREE</h4>
+        <img src="img/ml.jpg" alt="Course 5" style="height: 200px; width: 300px;">
+        <h3>Machine Learning Basics</h3>
+        <p>Explore the fundamentals of machine learning and artificial intelligence.</p>
+        <a href="https://www.coursera.org/learn/machine-learning-basics" style="text-align: center; color: antiquewhite; font-weight: bold;">ENROLL NOW</a>
+    </div>
+
+    <div class="course-card">
+        <h4 style="font-weight:200; color: green; text-align:left;">FREE</h4>
+        <img src="img/r.jpg" alt="Course 6" style="height: 200px; width: 300px;">
+        <h3>React.js Essentials</h3>
+        <p>Learn the essentials of building user interfaces with React.js.</p>
+        <a href="https://www.coursera.org/learn/react-basics" style="text-align: center; color: antiquewhite; font-weight: bold;">ENROLL NOW</a>
+    </div>
+
+
+
+
+</body>

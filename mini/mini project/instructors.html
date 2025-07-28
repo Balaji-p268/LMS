@@ -1,0 +1,164 @@
+skill learning platform
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        if (localStorage.getItem('isLoggedIn') !== 'true') {
+            window.location.href = 'login.html';
+        }
+    </script>
+    <meta charset="UTF-8">
+    <title>Instructor Portal</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            margin-top: 80px;
+        }
+
+        
+
+        
+
+        .login-signup form {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        .login-signup label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .login-signup input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        .login-signup button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .login-signup button:hover {
+            background-color: #555;
+        }
+
+        .courses {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .courses h2 {
+            font-size: 24px;
+        }
+
+        .course-card {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 20px;
+            display: inline-block;
+            max-width: 300px;
+            text-align: left;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    
+    
+
+    <nav class="navbar">
+        <div class="and">
+            <a href="#"> <img src="img/logo.jpg" style="height: 30px; width: 90px;"></a>
+            <div class="and1">
+            <a href="homepage.html">Home</a>
+            <a href="courses.html">Courses</a>
+            <a class="active" href="instructors.html">instructors</a>
+            <a  href="Students.html">Students</a>
+            <a href="forms.html">request forms</a>
+       </div>
+     </div>
+    </nav>
+      <header class="header">
+        <h1>Instructor Portal</h1>
+    </header>  
+    <div class="container">
+        <section class="hero">
+            <h2>Welcome, Instructors</h2>
+            <p>Manage your courses and interact with your students.</p>
+            
+        </section>
+        
+        <section class="login-signup">
+            <h3>Login / Sign Up</h3>
+            <form id="login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="login-username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="login-password" name="password" required>
+                <button type="button" onclick="login()">Login</button>
+            </form>
+            <form id="signup-form" style="display:none; margin-top:20px;">
+                <label for="new-username">New Username:</label>
+                <input type="text" id="new-username" name="new-username" required>
+                <label for="new-password">New Password:</label>
+                <input type="password" id="new-password" name="new-password" required>
+                <button type="button" onclick="signup()">Sign Up</button>
+                <button type="button" onclick="showLoginForm()">Back to Login</button>
+            </form>
+            <p id="signup-link">Don't have an account? <a href="#" onclick="showSignupForm()">Sign Up</a></p>
+        </section>
+    </div>
+    
+    
+    <script>
+        function login() {
+            var username = document.getElementById("login-username").value;
+            var password = document.getElementById("login-password").value;
+            var storedUsername = localStorage.getItem("instructorUsername");
+            var storedPassword = localStorage.getItem("instructorPassword");
+            if (username === storedUsername && password === storedPassword) {
+                window.location.href = "instructorcourse.html";
+            } else {
+                alert("Login failed. Check your username and password.");
+            }
+        }
+
+        function signup() {
+            var newUsername = document.getElementById("new-username").value;
+            var newPassword = document.getElementById("new-password").value;
+            if (newUsername === "" || newPassword === "") {
+                alert("Please fill in all fields.");
+                return;
+            }
+            localStorage.setItem("instructorUsername", newUsername);
+            localStorage.setItem("instructorPassword", newPassword);
+            alert("Registration successful! You can now log in with your new account.");
+            showLoginForm();
+        }
+
+        function showSignupForm() {
+            document.getElementById("login-form").style.display = "none";
+            document.getElementById("signup-form").style.display = "block";
+            document.getElementById("signup-link").style.display = "none";
+        }
+
+        function showLoginForm() {
+            document.getElementById("login-form").style.display = "block";
+            document.getElementById("signup-form").style.display = "none";
+            document.getElementById("signup-link").style.display = "block";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Course Request Result</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        body { font-family: Arial, sans-serif; background: #f9f9f9; }
+        .result-container { max-width: 500px; margin: 40px auto; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px #ccc; padding: 32px; }
+        h2 { text-align: center; color: #2a2a2a; }
+        .result-label { font-weight: bold; color: #333; }
+        .result-value { margin-bottom: 16px; }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h2>Submitted Course Request</h2>
+        <div id="result-output"></div>
+        <div style="text-align:center; margin-top:24px;">
+            <a href="forms.html">Back to Form</a>
+        </div>
+    </div>
+    <script>
+    // Read data from localStorage and display
+    const data = JSON.parse(localStorage.getItem('courseRequestData'));
+    if (data) {
+        document.getElementById('result-output').innerHTML =
+            '<div class="result-value"><span class="result-label">Name:</span> ' + data.name + '</div>' +
+            '<div class="result-value"><span class="result-label">Email:</span> ' + data.email + '</div>' +
+            '<div class="result-value"><span class="result-label">Mobile:</span> ' + data.mobile + '</div>' +
+            '<div class="result-value"><span class="result-label">Gender:</span> ' + data.gender + '</div>' +
+            '<div class="result-value"><span class="result-label">Course:</span> ' + data.section + '</div>' +
+            '<div class="result-value"><span class="result-label">Select:</span> ' + (data.hobbies.length ? data.hobbies.join(', ') : 'None') + '</div>' +
+            '<div class="result-value"><span class="result-label">Related to:</span> ' + data.related + '</div>';
+    } else {
+        document.getElementById('result-output').innerHTML = '<span style="color:red;">No data found. Please submit the form first.</span>';
+    }
+    </script>
+</body>
+</html>
