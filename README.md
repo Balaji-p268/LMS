@@ -23,6 +23,8 @@
 
 ## 🛠️ Tech Stack
 |----------------|---------------------|
+
+
 | Frontend       | HTML, CSS, JavaScript |
 
 
@@ -34,5 +36,7 @@
 ## ⚙️ Installation
 
 1.copy all the files into editor such as Notepad,visual studio code etc..
+
 2.run the login.html in your editor.
+
 3.Acess all the html pages in the homepage. 
